@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+*{
+	margin:0;
+	padding:0;
+}
+#wrapper{
+	width:440px;
+	margin: 20px auto;
+}
+.container{
+	float:left;
+}
+p.container{
+	width: 20px;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+}
+.container>input, .container>select{
+	display:block;
+}
+input,select{
+	box-sizing:border-box; 
+	width:200px;
+	height: 20px;
+}
+#buttonDiv{
+	clear:left;
+	padding:10px 0 0 0;
+}

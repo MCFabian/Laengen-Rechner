@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calculator</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div id="wrapper">
+		<div class="container">
+			<input type="text" id="inputIn">
+			<select id="selectIn">
+				<option value="1">Zentimeter</option>
+				<option value="2">Yard</option>
+				<option value="3">Fuß</option>
+				<option value="4">Zoll</option>
+			</select>
+		</div>
+
+		<p class="container">=</p>
+
+		<div class="container">
+			<input type="text" id="inputOut" readonly>
+			<select id="selectOut">
+				<option value="1">Zentimeter</option>
+				<option value="2">Yard</option>
+				<option value="3">Fuß</option>
+				<option value="4">Zoll</option>
+			</select>
+		</div>
+
+		<div id="buttonDiv">
+			<button onClick="calculate()">Berechnen</button>
+		</div>
+	</div>
+	
+	<script src="script.js"></script>
+</body>
+</html>
