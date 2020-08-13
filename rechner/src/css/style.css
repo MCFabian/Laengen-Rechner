@@ -5,11 +5,24 @@
 	padding:0;
 }
 #wrapper{
-	width:440px;
-	margin: 20px auto;
+	padding: 20px;
+	border-radius: 5px;
+	background: #fff;
+	margin: auto;
+	width: 500px;
+	-webkit-box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
+	box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
+	margin-top: 10%;
 }
 .container{
-	float:left;
+	width: 100%;
+}
+
+input,select {
+	display: block;
+	width: 100%;
+	box-sizing:border-box; 
+	padding: 10px;
 }
 p.container{
 	width: 20px;
@@ -20,12 +33,19 @@ p.container{
 .container>input, .container>select{
 	display:block;
 }
-input,select{
-	box-sizing:border-box; 
-	width:200px;
-	height: 20px;
-}
 #buttonDiv{
-	clear:left;
-	padding:10px 0 0 0;
+	padding: 0;
+	margin: 10px 0;
+	width: 100%;
+}
+
+button {
+	display: block;
+	padding: 15px;
+	background: #f1f8ff;
+	color: #79b8ff;
+	border: none;
+	box-shadow: none;
+	border-radius: 3px;
+	width: 100%;
 }
