@@ -25,6 +25,12 @@ function checkvalue() {
 	}
 }
 
+function error () {
+	document.getElementById("outer").style.background = "red";
+	document.getElementById("output").innerHTML = "Es ist ein Fehler aufgetreten."
+	document.getElementById("sizer").innerHTML = "";
+}
+
 function calculate(){
 	// Einheiten und Wert weden aus dem HTML "gelesen"
 	fromValue = document.getElementById("from").value; // Einheit "von"
@@ -38,7 +44,7 @@ function calculate(){
 
 	if (fromValue == 1 && toValue == 1) {
 		var ergebnis = sizeValue;
-		document.getElementById("output").value=ergebnis; // Ausgabe
+		document.getElementById("output").innerHTML=ergebnis; // Ausgabe
 		alert("Fehler");
 	}
 
@@ -46,7 +52,7 @@ function calculate(){
 		var ergebnis = "" + (sizeValue / 91.44);
 		checkvalue();
 		ergebnis = ergebnis.replace(".", ",");
-		document.getElementById("output").value=ergebnis; // Ausgabe
+		document.getElementById("output").innerHTML=ergebnis; // Ausgabe
 
 	}
 
@@ -57,75 +63,75 @@ function calculate(){
 
 	else if (fromValue == 1 && toValue == 4) {
 		var ergebnis = "" + (sizeValue / 2.54);
-		document.getElementById("output").value=ergebnis; // Ausgabe
+		document.getElementById("output").innerHTML=ergebnis; // Ausgabe
 	}
 
 	// Select Yard 
 
 	else if (fromValue == 2 && toValue == 1) {
 		var ergebnis = "" + (sizeValue * 91.44);
-		document.getElementById("output").value=ergebnis; // Ausgabe
+		document.getElementById("output").innerHTML=ergebnis; // Ausgabe
 	}
 
 	else if (fromValue == 2 && toValue == 2) {
 		var ergebnis = sizeValue;
-		document.getElementById("output").value=ergebnis; // Ausgabe
+		document.getElementById("output").innerHTML=ergebnis; // Ausgabe
 		alert("Fehler");
 	}
 
 	else if (fromValue == 2 && toValue == 3) {
 		var ergebnis = "" + (sizeValue * 3);
-		document.getElementById("output").value=ergebnis; // Ausgabe
+		document.getElementById("output").innerHTML=ergebnis; // Ausgabe
 	}
 
 	else if (fromValue == 2 && toValue == 4) {
 		var ergebnis = "" + (sizeValue * 36);
-		document.getElementById("output").value=ergebnis; // Ausgabe
+		document.getElementById("output").innerHTML=ergebnis; // Ausgabe
 	}
 
 	// Select Fuß
 
 	else if (fromValue == 3 && toValue == 1) {
 		var ergebnis = "" + (sizeValue * 30.48);
-		document.getElementById("output").value=ergebnis; // Ausgabe
+		document.getElementById("output").innerHTML=ergebnis; // Ausgabe
 	}
 
 	else if (fromValue == 3 && toValue == 2) {
 		var ergebnis = "" + (sizeValue / 3);
-		document.getElementById("output").value=ergebnis; // Ausgabe
+		document.getElementById("output").innerHTML=ergebnis; // Ausgabe
 	}
 
 	else if (fromValue == 3 && toValue == 3) {
 		var ergebnis = sizeValue;
-		document.getElementById("output").value=ergebnis; // Ausgabe
+		document.getElementById("output").innerHTML=ergebnis; // Ausgabe
 		alert("Fehler");
 	}
 
 	else if (fromValue == 3 && toValue == 4) {
 		var ergebnis = "" + (sizeValue * 12);
-		document.getElementById("output").value=ergebnis; // Ausgabe
+		document.getElementById("output").innerHTML=ergebnis; // Ausgabe
 	}
 
 	// Select Zoll
 
 	else if (fromValue == 4 && toValue == 1) {
 		var ergebnis = "" + (sizeValue * 2.54);
-		document.getElementById("output").value=ergebnis; // Ausgabe
+		document.getElementById("output").innerHTML=ergebnis; // Ausgabe
 	}
 
 	else if (fromValue == 4 && toValue == 2) {
 		var ergebnis = "" + (sizeValue / 36);
-		document.getElementById("output").value=ergebnis; // Ausgabe
+		document.getElementById("output").innerHTML=ergebnis; // Ausgabe
 	}
 
 	else if (fromValue == 4 && toValue == 3) {
 		var ergebnis = "" + (sizeValue / 12);
-		document.getElementById("output").value=ergebnis; // Ausgabe
+		document.getElementById("output").innerHTML=ergebnis; // Ausgabe
 	}
 
 	else if (fromValue == 4 && toValue == 4) {
 		var ergebnis = sizeValue;
-		document.getElementById("output").value=ergebnis; // Ausgabe
+		document.getElementById("output").innerHTML=ergebnis; // Ausgabe
 		alert("fehler");
 	}
 

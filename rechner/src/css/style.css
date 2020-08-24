@@ -3,9 +3,10 @@
 *{
 	margin:0;
 	padding:0;
+	font-family: Arial, Helvetica, sans-serif;
 }
 #wrapper{
-	padding: 20px;
+	overflow: hidden;
 	border-radius: 5px;
 	background: #fff;
 	margin: auto;
@@ -53,4 +54,18 @@ button {
 button:hover {
 	-webkit-box-shadow: 0 0 10px 5px rgba(44, 115, 148, 0.1);
 	box-shadow: 0 0 10px 5px rgba(44, 115, 148, 0.1);
+}
+
+#outer {
+	text-align: right;
+	background: #937ce5;
+	color: #fff;
+	padding: 40px 20px;
+	font-size: 3rem;
+	min-height: 50px;
+}
+
+#sizer {
+	font-size: 1.5rem;
+	color: rgba(255, 255, 255, 0.5);
 }
