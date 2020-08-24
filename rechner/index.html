@@ -9,8 +9,8 @@
 <body>
 	<div id="wrapper">
 		<div class="container">
-			<input type="text" id="inputIn">
-			<select id="selectIn">
+			<input type="text" id="input">
+			<select id="from">
 				<option value="1">Zentimeter</option>
 				<option value="2">Yard</option>
 				<option value="3">Fuß</option>
@@ -21,8 +21,8 @@
 		<p class="container">=</p>
 
 		<div class="container">
-			<input type="text" id="inputOut" readonly>
-			<select id="selectOut">
+			<input type="text" id="output" disabled="disabled">
+			<select id="to">
 				<option value="1">Zentimeter</option>
 				<option value="2">Yard</option>
 				<option value="3">Fuß</option>
@@ -33,6 +33,7 @@
 		<div id="buttonDiv">
 			<button onClick="calculate()">Berechnen</button>
 		</div>
+		<div id=""></div>
 	</div>
 	
 	<script src="src/js/script.js"></script>
