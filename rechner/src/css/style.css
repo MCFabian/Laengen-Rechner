@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+:root {
+	--purple: #937ce5;
+}
+
 *{
 	margin:0;
 	padding:0;
@@ -58,7 +62,7 @@ button:hover {
 
 #outer {
 	text-align: right;
-	background: #937ce5;
+	background: var(--purple);
 	color: #fff;
 	padding: 40px 20px;
 	font-size: 3rem;
