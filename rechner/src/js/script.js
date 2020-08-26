@@ -6,22 +6,12 @@
 // 3 == Fuß
 // 4 == Zoll
 
+// globale Variablen
+
 var fromValue;
 var toValue;
 var sizeValue;
 var ergebnis;
-
-function checkvalue() {
-	if(isNaN(ergebnis)) {
-		alert("Keine Zahl");
-	}  
-
-
-
-	else {
-		
-	}
-}
 
 
 // Falls Einheiten gleich sind
@@ -43,9 +33,13 @@ function callerror () {
 
 }
 
+// Call Calculator Function
+
 document.getElementById("action").addEventListener("click", function(){
 	calculate();
 });
+
+// Calculator Function
 
 function calculate(){
 	// Einheiten und Wert weden aus dem HTML "gelesen"
