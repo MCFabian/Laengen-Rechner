@@ -9,6 +9,12 @@
 	padding:0;
 	font-family: Arial, Helvetica, sans-serif;
 }
+
+body {
+	background: whitesmoke;
+	font-size: 1rem;
+}
+
 #wrapper{
 	overflow: hidden;
 	border-radius: 5px;
@@ -23,41 +29,66 @@
 	width: 100%;
 }
 
+label {
+	color: #727272;
+	font-weight: bold;
+}
+
 input,select {
 	display: block;
 	width: 100%;
+	position: relative;
 	box-sizing:border-box; 
-	padding: 10px;
+	padding: 15px 10px;
+	margin-top: 5px;
+	color: #727272;
 }
-p.container{
-	width: 20px;
-	text-align: center;
-	height: 40px;
-	line-height: 40px;
+
+input::placeholder {
+	color: #bdbdbd;
 }
-.container>input, .container>select{
-	display:block;
+
+#containerinput{
+	margin: 0 15px;
+	position: relative;
+	padding: 15px 0;
 }
-#buttonDiv{
-	margin: 10px 0;
+
+.container{
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	padding: 15px;
+}
+
+.container label {
+	width: 45%;
+	position: relative;
+}
+
+.container label:last-child {
+	margin-left: 15px;
 }
 
 button {
 	display: block;
 	padding: 15px;
-	background: #f1f8ff;
-	color: #79b8ff;
+	background: var(--purple);
+	color: #fff;
 	border: none;
 	box-shadow: none;
 	border-radius: 3px;
 	width: 100%;
 	cursor: pointer;
 	transition: 0.3s;
+	font-size: 1rem;
+	border: 2px solid var(--purple);
 }
 
 button:hover {
 	-webkit-box-shadow: 0 0 10px 5px rgba(44, 115, 148, 0.1);
 	box-shadow: 0 0 10px 5px rgba(44, 115, 148, 0.1);
+	border: 2px solid #745fc0;
 }
 
 #outer {
@@ -72,4 +103,13 @@ button:hover {
 #sizer {
 	font-size: 1.5rem;
 	color: rgba(255, 255, 255, 0.5);
+}
+
+.hint {
+	background: #f3f3f3;
+	color: #727272;
+	border: 1px solid #d6d6d6;
+	padding: 15px;
+	margin: 15px 15px 30px 15px;
+	font-size: 1rem;
 }

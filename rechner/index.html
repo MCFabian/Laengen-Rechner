@@ -15,32 +15,37 @@
 	<div id="wrapper">
 		<div id="outer">
 			<div id="output"></div>
-			<div id="sizer">Test</div>
+			<div id="sizer"></div>
 		</div>
-		<div class="container">
-			<input type="text" id="input">
-			<select id="from">
-				<option value="1">Zentimeter</option>
-				<option value="2">Yard</option>
-				<option value="3">Fuß</option>
-				<option value="4">Zoll</option>
-			</select>
+		<div id="hint" class=""></div>
+		<div id="containerinput">
+			<label for="input">Eingabe
+				<input placeholder="Wert eingeben" type="text" id="input">
+			</label>
 		</div>
 
-		<p class="container">=</p>
-
 		<div class="container">
-			<input type="text" id="" disabled="disabled">
-			<select id="to">
-				<option value="1">Zentimeter</option>
-				<option value="2">Yard</option>
-				<option value="3">Fuß</option>
-				<option value="4">Zoll</option>
-			</select>
+			<label for="from">Von
+				<select id="from">
+					<option value="1">Zentimeter</option>
+					<option value="2">Yard</option>
+					<option value="3">Fuß</option>
+					<option value="4">Zoll</option>
+				</select>
+			</label>
+
+			<label for="to">Zu
+				<select id="to">
+					<option value="1">Zentimeter</option>
+					<option value="2">Yard</option>
+					<option value="3">Fuß</option>
+					<option value="4">Zoll</option>
+				</select>
+			</label>
 		</div>
 
 		<div id="buttonDiv">
-			<button onClick="calculate()">Berechnen</button>
+			<button id="action">Berechnen</button>
 		</div>
 		<div id=""></div>
 	</div>
