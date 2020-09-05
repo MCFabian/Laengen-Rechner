@@ -6,12 +6,28 @@
 // 3 == Fuß
 // 4 == Zoll
 
-// globale Variablen
+// Globale Variablen
 
 var fromValue;
 var toValue;
 var sizeValue;
 var ergebnis;
+
+
+// Falls das Ergebnis NaN ist 
+function proof(){
+	if(isNaN(ergebnis)){
+		hint.classList.add("hint");
+		hint.innerHTML = "Bitte Zahl eintragen!";
+		ergebnis = "Bitte Zahl eintragen!";
+
+		// Fehlermeldung enfernen
+		document.getElementById("input").addEventListener("click", function() {
+			hint.classList.remove("hint");
+			hint.innerHTML = "";
+		});
+	}
+}
 
 
 // Falls Einheiten gleich sind
@@ -53,7 +69,8 @@ function calculate(){
 	// Select Zentimeter
 
 	if (fromValue == 1 && toValue == 1) {
-		var ergebnis = sizeValue;
+		ergebnis = sizeValue;
+		proof();
 		ergebnis = ergebnis.replace(".", ",");
 		document.getElementById("output").innerHTML=ergebnis; // Ausgabe
 		document.getElementById("sizer").innerHTML = "Zentimeter"; // Ausgabe
@@ -61,21 +78,24 @@ function calculate(){
 	}
 
 	else if(fromValue == 1 && toValue == 2) {
-		var ergebnis = "" + (sizeValue / 91.44);
+		ergebnis = "" + (sizeValue / 91.44);
+		proof();
 		ergebnis = ergebnis.replace(".", ",");
 		document.getElementById("output").innerHTML=ergebnis; // Ausgabe
 		document.getElementById("sizer").innerHTML = "Yard"; // Ausgabe
 	}
 
 	else if (fromValue == 1 && toValue == 3) {
-		var ergebnis = "" + (sizeValue / 30.48);
+		ergebnis = "" + (sizeValue / 30.48);
+		proof();
 		ergebnis = ergebnis.replace(".", ",");
 		document.getElementById("output").value=ergebnis; // Ausgabe
 		document.getElementById("sizer").innerHTML = "Fuß"; // Ausgabe
 	}
 
 	else if (fromValue == 1 && toValue == 4) {
-		var ergebnis = "" + (sizeValue / 2.54);
+		ergebnis = "" + (sizeValue / 2.54);
+		proof();
 		ergebnis = ergebnis.replace(".", ",");
 		document.getElementById("output").innerHTML=ergebnis; // Ausgabe
 		document.getElementById("sizer").innerHTML = "Zoll"; // Ausgabe
@@ -84,14 +104,16 @@ function calculate(){
 	// Select Yard 
 
 	else if (fromValue == 2 && toValue == 1) {
-		var ergebnis = "" + (sizeValue * 91.44);
+		ergebnis = "" + (sizeValue * 91.44);
+		proof();
 		ergebnis = ergebnis.replace(".", ",");
 		document.getElementById("output").innerHTML=ergebnis; // Ausgabe
 		document.getElementById("sizer").innerHTML = "Zentimeter"; // Ausgabe
 	}
 
 	else if (fromValue == 2 && toValue == 2) {
-		var ergebnis = sizeValue;
+		ergebnis = sizeValue;
+		proof();
 		ergebnis = ergebnis.replace(".", ",");
 		document.getElementById("output").innerHTML=ergebnis; // Ausgabe
 		document.getElementById("sizer").innerHTML = "Yard"; // Ausgabe
@@ -99,14 +121,16 @@ function calculate(){
 	}
 
 	else if (fromValue == 2 && toValue == 3) {
-		var ergebnis = "" + (sizeValue * 3);
+		ergebnis = "" + (sizeValue * 3);
+		proof();
 		ergebnis = ergebnis.replace(".", ",");
 		document.getElementById("output").innerHTML=ergebnis; // Ausgabe
 		document.getElementById("sizer").innerHTML = "Fuß"; // Ausgabe
 	}
 
 	else if (fromValue == 2 && toValue == 4) {
-		var ergebnis = "" + (sizeValue * 36);
+		ergebnis = "" + (sizeValue * 36);
+		proof();
 		ergebnis = ergebnis.replace(".", ",");
 		document.getElementById("output").innerHTML=ergebnis; // Ausgabe
 		document.getElementById("sizer").innerHTML = "Zoll"; // Ausgabe
@@ -115,21 +139,24 @@ function calculate(){
 	// Select Fuß
 
 	else if (fromValue == 3 && toValue == 1) {
-		var ergebnis = "" + (sizeValue * 30.48);
+		ergebnis = "" + (sizeValue * 30.48);
+		proof();
 		ergebnis = ergebnis.replace(".", ",");
 		document.getElementById("output").innerHTML=ergebnis; // Ausgabe
 		document.getElementById("sizer").innerHTML = "Zentimeter"; // Ausgabe
 	}
 
 	else if (fromValue == 3 && toValue == 2) {
-		var ergebnis = "" + (sizeValue / 3);
+		ergebnis = "" + (sizeValue / 3);
+		proof();
 		ergebnis = ergebnis.replace(".", ",");
 		document.getElementById("output").innerHTML=ergebnis; // Ausgabe
 		document.getElementById("sizer").innerHTML = "Yard"; // Ausgabe
 	}
 
 	else if (fromValue == 3 && toValue == 3) {
-		var ergebnis = sizeValue;
+		ergebnis = sizeValue;
+		proof();
 		ergebnis = ergebnis.replace(".", ",");
 		document.getElementById("output").innerHTML=ergebnis; // Ausgabe
 		document.getElementById("sizer").innerHTML = "Fuß"; // Ausgabe
@@ -137,7 +164,8 @@ function calculate(){
 	}
 
 	else if (fromValue == 3 && toValue == 4) {
-		var ergebnis = "" + (sizeValue * 12);
+		ergebnis = "" + (sizeValue * 12);
+		proof();
 		ergebnis = ergebnis.replace(".", ",");
 		document.getElementById("output").innerHTML=ergebnis; // Ausgabe
 		document.getElementById("sizer").innerHTML = "Zoll"; // Ausgabe
@@ -146,28 +174,32 @@ function calculate(){
 	// Select Zoll
 
 	else if (fromValue == 4 && toValue == 1) {
-		var ergebnis = "" + (sizeValue * 2.54);
+		ergebnis = "" + (sizeValue * 2.54);
+		proof();
 		ergebnis = ergebnis.replace(".", ",");
 		document.getElementById("output").innerHTML=ergebnis; // Ausgabe
 		document.getElementById("sizer").innerHTML = "Zentimeter"; // Ausgabe
 	}
 
 	else if (fromValue == 4 && toValue == 2) {
-		var ergebnis = "" + (sizeValue / 36);
+		ergebnis = "" + (sizeValue / 36);
+		proof();
 		ergebnis = ergebnis.replace(".", ",");
 		document.getElementById("output").innerHTML=ergebnis; // Ausgabe
 		document.getElementById("sizer").innerHTML = "Yard"; // Ausgabe
 	}
 
 	else if (fromValue == 4 && toValue == 3) {
-		var ergebnis = "" + (sizeValue / 12);
+		ergebnis = "" + (sizeValue / 12);
+		proof();
 		ergebnis = ergebnis.replace(".", ",");
 		document.getElementById("output").innerHTML=ergebnis; // Ausgabe
 		document.getElementById("sizer").innerHTML = "Fuß"; // Ausgabe
 	}
 
 	else if (fromValue == 4 && toValue == 4) {
-		var ergebnis = sizeValue;
+		ergebnis = sizeValue;
+		proof();
 		ergebnis = ergebnis.replace(".", ",");
 		document.getElementById("output").innerHTML=ergebnis; // Ausgabe
 		document.getElementById("sizer").innerHTML = "Zoll"; // Ausgabe
@@ -179,9 +211,5 @@ function calculate(){
 	else {
 		alert("Hier ist etwas schiefgelaufen");
 	}
-
-
-
-
 
 }
